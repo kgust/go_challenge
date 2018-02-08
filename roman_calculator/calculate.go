@@ -17,7 +17,6 @@ func Add(input1, input2 string) (string, error) {
 }
 
 func Subtract(input1, input2 string) (string, error) {
-	// TODO Q: How do I support negative numbers?
 	value1, err := Decode(input1)
 	if err != nil {
 		return "An error occurred", err
@@ -26,6 +25,10 @@ func Subtract(input1, input2 string) (string, error) {
 	value2, err := Decode(input2)
 	if err != nil {
 		return "An error occurred", err
+	}
+
+	if value2 > value1 {
+		return "negative values are not allowed", errors.New("Negative values are not allowed")
 	}
 
 	return Encode(value1 - value2)

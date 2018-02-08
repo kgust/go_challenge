@@ -1,7 +1,5 @@
 package main
 
-// TODO Write a help command and make it the default
-
 import (
 	"fmt"
 	"os"
@@ -84,6 +82,7 @@ func main() {
 				fmt.Println(output)
 			}
 		default:
+			fmt.Printf("Invalid operator (%s)\n", operation)
 			// TODO throw an error
 		}
 	}

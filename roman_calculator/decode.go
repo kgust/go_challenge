@@ -6,9 +6,6 @@ import (
 	"strings"
 )
 
-// TODO handle unexpected input (e.g. "N", garbage chars, etc.)
-// TODO if the sum is greater than 3999, throw an error
-
 // Decode from Roman to Arabic
 func Decode(input string) (int, error) {
 	Σ := 0
@@ -50,6 +47,10 @@ func Decode(input string) (int, error) {
 			err := errors.New(fmt.Sprintf("decode: invalid characters detected (%s)", α))
 			return -1, err
 		}
+	}
+
+	if Σ > 3999 {
+		return -1, errors.New("Incorrect input: roman numerals greater than 3999 are not allowed")
 	}
 
 	return Σ, nil
