@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
+	calc "github.com/kgust/go_challenge/roman_calculator"
 	"os"
 	"strconv"
-	calc "vumc.org/go_challenge/roman_calculator"
 )
 
 func main() {
