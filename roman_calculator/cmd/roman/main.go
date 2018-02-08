@@ -30,6 +30,7 @@ func main() {
 		output, err := calc.Encode(value)
 		if err != nil {
 			fmt.Println(err)
+			return
 		}
 		fmt.Println(output)
 	}
@@ -39,6 +40,7 @@ func main() {
 		output, err := calc.Decode(input)
 		if err != nil {
 			fmt.Println(err)
+			return
 		}
 		fmt.Println(output)
 	}
@@ -53,6 +55,7 @@ func main() {
 			output, err := calc.Add(input1, input2)
 			if err != nil {
 				fmt.Println(err)
+				return
 			} else {
 				fmt.Println(output)
 			}
@@ -60,6 +63,7 @@ func main() {
 			output, err := calc.Subtract(input1, input2)
 			if err != nil {
 				fmt.Println(err)
+				return
 			} else {
 				fmt.Println(output)
 			}
@@ -67,6 +71,7 @@ func main() {
 			output, err := calc.Multiply(input1, input2)
 			if err != nil {
 				fmt.Println(err)
+				return
 			} else {
 				fmt.Println(output)
 			}
@@ -74,6 +79,7 @@ func main() {
 			output, err := calc.Divide(input1, input2)
 			if err != nil {
 				fmt.Println(err)
+				return
 			} else {
 				fmt.Println(output)
 			}

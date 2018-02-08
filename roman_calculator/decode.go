@@ -1,6 +1,10 @@
 package roman_calculator
 
-import "strings"
+import (
+	"errors"
+	"fmt"
+	"strings"
+)
 
 // TODO handle unexpected input (e.g. "N", garbage chars, etc.)
 // TODO if the sum is greater than 3999, throw an error
@@ -18,6 +22,7 @@ func Decode(input string) (int, error) {
 	for {
 		α := ""
 		β := ""
+		length := len(input)
 
 		if len(input) == 0 {
 			break
@@ -38,6 +43,12 @@ func Decode(input string) (int, error) {
 				input = input[1:]
 				break
 			}
+		}
+
+		if length == len(input) {
+			// didn't change, loop detected
+			err := errors.New(fmt.Sprintf("decode: invalid characters detected (%s)", α))
+			return -1, err
 		}
 	}
 
