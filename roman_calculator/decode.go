@@ -1,14 +1,15 @@
 package roman_calculator
 
-// TODO whitespace trim the input
-// TODO handle lower case input
+import "strings"
+
 // TODO handle unexpected input (e.g. "N", garbage chars, etc.)
-// TODO if an invalid char is passed, throw an error
 // TODO if the sum is greater than 3999, throw an error
 
 // Decode from Roman to Arabic
 func Decode(input string) (int, error) {
 	Σ := 0
+
+	input = strings.ToUpper(strings.TrimSpace(input))
 
 	if input == "N" {
 		return 0, nil
