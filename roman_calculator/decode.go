@@ -1,13 +1,18 @@
 package roman_calculator
 
 // TODO whitespace trim the input
-// TODO string to lower input
+// TODO handle lower case input
+// TODO handle unexpected input (e.g. "N", garbage chars, etc.)
 // TODO if an invalid char is passed, throw an error
 // TODO if the sum is greater than 3999, throw an error
 
 // Decode from Roman to Arabic
-func Decode(input string) int {
+func Decode(input string) (int, error) {
 	Σ := 0
+
+	if input == "N" {
+		return 0, nil
+	}
 
 	for {
 		α := ""
@@ -35,5 +40,5 @@ func Decode(input string) int {
 		}
 	}
 
-	return Σ
+	return Σ, nil
 }

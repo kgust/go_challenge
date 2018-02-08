@@ -1,11 +1,22 @@
 package roman_calculator
 
-// TODO if the input is negative, throw an error
-// TODO if the input > 3999, throw an error
+import (
+	"errors"
+	"fmt"
+)
 
-func Encode(input int) string {
+type OutOfBoundsError int
+
+func (i OutOfBoundsError) Error() string {
+	return fmt.Sprintf("roman_calculator.encode: %d is negative or greater then 3999", int(i))
+}
+
+func Encode(input int) (string, error) {
+	if input < 0 || input > 3999 {
+		return "invalid input", errors.New("Input out of bounds, 0-3999")
+	}
 	current = ""
-	return encoding(input)
+	return encoding(input), nil
 }
 
 // Encode Arabic to Roman

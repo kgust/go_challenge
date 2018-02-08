@@ -4,6 +4,7 @@ package roman_calculator
 // https://www.rapidtables.com/convert/number/roman-numerals-converter.html
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -54,7 +55,11 @@ func TestEncode(t *testing.T) {
 		3999: "MMMCMXCIX",
 	}
 	for input, expected := range values {
-		actual := Encode(input)
+		actual, err := Encode(input)
+
+		if err != nil {
+			fmt.Println(err)
+		}
 
 		if actual != expected {
 			t.Errorf("Encode(%d): expected %s, actual %s", input, expected, actual)
@@ -97,7 +102,11 @@ func TestDecode(t *testing.T) {
 	}
 
 	for input, expected := range values {
-		actual := Decode(input)
+		actual, err := Decode(input)
+
+		if err != nil {
+			fmt.Println(err)
+		}
 
 		if actual != expected {
 			t.Errorf("Decode(%d): expected %d, actual %d", input, expected, actual)

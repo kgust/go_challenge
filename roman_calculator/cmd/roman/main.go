@@ -27,12 +27,20 @@ func main() {
 	if command == "enc" || command == "encode" {
 		input := os.Args[2]
 		value, _ := strconv.Atoi(input)
-		fmt.Println(calc.Encode(value))
+		output, err := calc.Encode(value)
+		if err != nil {
+			fmt.Println(err)
+		}
+		fmt.Println(output)
 	}
 
 	if command == "dec" || command == "decode" {
 		input := os.Args[2]
-		fmt.Println(calc.Decode(input))
+		output, err := calc.Decode(input)
+		if err != nil {
+			fmt.Println(err)
+		}
+		fmt.Println(output)
 	}
 
 	if command == "calc" || command == "calculate" {
