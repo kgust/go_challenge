@@ -6,6 +6,5 @@ func FindRoman(idx string, val int) RomanNumeral {
 			return v
 		}
 	}
-	var value = RomanNumeral{"N", 0}
-	return value
+	return RomanNumeral{"N", 0}
 }

@@ -1,15 +1,6 @@
 package roman_calculator
 
-import (
-	"errors"
-	"fmt"
-)
-
-type OutOfBoundsError int
-
-func (i OutOfBoundsError) Error() string {
-	return fmt.Sprintf("roman_calculator.encode: %d is negative or greater then 3999", int(i))
-}
+import "errors"
 
 func Encode(input int) (string, error) {
 	if input < 0 || input > 3999 {
