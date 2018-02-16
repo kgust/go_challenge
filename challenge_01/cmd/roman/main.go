@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	calc "github.com/kgust/go_challenge/roman_calculator"
+	calc "github.com/kgust/go_challenge/challenge_01"
 	"os"
 	"strconv"
 )
