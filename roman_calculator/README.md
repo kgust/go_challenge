@@ -58,3 +58,14 @@ _From The Go Programming Language by Alan Donovan and Brian Kernighan_
 - - -
 
 In general, the number zero did not have its own Roman numeral, but the concept of zero as a number was known by medieval computists (responsible for calculating the date of Easter). They included zero (via the Latin word `nullus` meaning none) as one of nineteen epacts, or the age of the moon on March 22. The first three epacts were nullae, xi, and xxii (written in minuscule or lower case). The first known computist to use zero was Dionysius Exiguus in 525. Only one instance of a Roman numeral for zero is known. About 725, Bede or one of his colleagues used the letter `N`, the initial of `nullae`, in a table of epacts, all written in Roman numerals.
+
+### Installation
+
+```
+$ go get github.com/kgust/go_challenge/roman_calculator
+$ cd $GOPATH/github.com/kgust/go_challenge/roman_calculator
+$ go test
+$ go install ./...
+
+$ roman  # To see usage and examples
+```
