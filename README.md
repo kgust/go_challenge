@@ -1,5 +1,16 @@
-VICTR Language Challenge 2018
+### VICTR Language Challenge 2018
 
 See each of the challenge directories for specific instructions.
 
 Challenge 1: [Roman Numerals](roman_calculator/README.md)
+
+
+#### Testing
+
+The go test runner is pretty bare-bones, e.g. it doesn't have a `--watch` option. Thankfully, Jest has `jest-runner-go` so it can be used for more full featured testing.
+
+```
+$ yarn install # or npm install
+$ jest --watch
+```
+
