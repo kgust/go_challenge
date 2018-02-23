@@ -16,7 +16,7 @@ share some of youur code at our group meeting.
 
 ### Task 1: Word Game
 
-Crate a word game where the player is gien a set of letters and
+Create a word game where the player is given a set of letters and
 tries to make as many words as possible from those letters in 30
 seconds.  Make sure that the letters you provide actually work
 before you display them (no fair giving them XQZK). At the end of
