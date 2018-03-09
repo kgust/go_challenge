@@ -22,7 +22,7 @@ func TestFindRoman(t *testing.T) {
 	for idx, val := range values {
 		actual := FindRoman(idx, 0)
 		if actual.Val != val {
-			t.Errorf("FindRoman(%d): expected %s, actual %s", idx, val, actual.Val)
+			t.Errorf("FindRoman(%s): expected %d, actual %d", idx, val, actual.Val)
 		}
 	}
 
@@ -109,7 +109,7 @@ func TestDecode(t *testing.T) {
 		}
 
 		if actual != expected {
-			t.Errorf("Decode(%d): expected %d, actual %d", input, expected, actual)
+			t.Errorf("Decode(%s): expected %d, actual %d", input, expected, actual)
 		}
 	}
 }
