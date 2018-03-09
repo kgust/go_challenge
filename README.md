@@ -2,7 +2,7 @@
 
 See each of the challenge directories for specific instructions.
 
-Challenge 1: [Roman Numerals](roman_calculator/README.md)
+Challenge 1: [Roman Numeral Calculator](challenge_01/README.md)
 
 
 #### Testing

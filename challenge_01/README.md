@@ -62,8 +62,8 @@ In general, the number zero did not have its own Roman numeral, but the concept 
 ### Installation
 
 ```
-$ go get github.com/kgust/go_challenge/roman_calculator
-$ cd $GOPATH/github.com/kgust/go_challenge/roman_calculator
+$ go get github.com/kgust/go_challenge/challenge_01
+$ cd $GOPATH/github.com/kgust/go_challenge/challenge_01
 $ go test
 $ go install ./...
 
